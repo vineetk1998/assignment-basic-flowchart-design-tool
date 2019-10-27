@@ -1,22 +1,80 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.App{
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
 }
 
-.App-link {
-  color: #09d3ac;
+.container{
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 60px 60px 60px 60px auto;
+  grid-template-areas:
+        "t t t t t t t t t t t t"
+        "s c c c c c c c c c c c"
+        "s c c c c c c c c c c c"
+        "s c c c c c c c c c c c"
+        "s c c c c c c c c c c c"
+        ". c c c c c c c c c c c";
+}
+
+.Canvas{
+  grid-area: c;
+}
+
+.Topbar{
+  grid-area: t;
+}
+
+.Sidebar{
+  grid-area: s;
+}
+
+.topbar-container{
+  margin-left: 10%;
+  display: flex;
+}
+
+.Save{
+  width: 10%;
+}
+
+.Open{
+  width: 10%;
+}
+
+.Rectangle{
+  background-color: #ff6f69;
+
+}
+
+.Triangle{
+  background-color: #96ceb4;  
+}
+
+.Circle{
+  background-color: #ff6f69;
+}
+
+.Line {
+  background-color: #96ceb4;  
+}
+
+.Rectangle:hover, .Circle:hover, .Line:hover, .Triangle:hover {
+  background-color: #aaa;
+}
+
+.canvas{
+  border: 2px solid grey;
+}
+
+
+.resize {cursor: crosshair;}
+.move {cursor: grab;}
+.grab {cursor: grabbing;}
+
+
+
+.image-upload>input {
+  display: none;
 }
